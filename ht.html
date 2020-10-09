@@ -1,12 +1,15 @@
 <!doctype html>
-<html lang="pl"><
+<html lang="en">
      <head>
           <meta charset="UTF-8" />
           <title>Tytuł strony...</title>
      </head>
      <body>
-         <button oneclick="pokazTekst()">POKAZ TEKST</button>
+         <button oneclick="pokazTekst"()>POKAZ TEKST</button>
          <p id="wynik"></p>
+         <button oneclick="obrazek"()>POKAZ / UKRYF OBRAZ</button>
+            <img src="https://store-images.s-microsoft.com/image/apps.41722.68331807765411716.aa4ceb76-e992-46a5-83ba-5a5c948cd534.f178157a-83b2-49f2-acee-a20721cca8a5" alt="losowy"
+                style="display: none;" id="obraz">
          <script>
              /*
              Console.log("witaj swiecie");
@@ -17,7 +20,14 @@
             */
             function pokazTekst() {
                 document.getElementById('wynik').innerHTML =
-                "zapisujemy do p z poziomu JS"         
+                "zapisujemy do p z poziomu JS";  
+            }
+            function obrazek() {
+                if(document.getElementById('obraz').style.display == "none")
+                    document.getElementById('obraz').style.display == "block";
+                else
+                document.getElementById('obraz').style.display = "none";
+            }      
             </script>
      </body>
 </html>
